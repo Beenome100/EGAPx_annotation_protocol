@@ -1,6 +1,23 @@
 # EGAPx annotation protocol
 Structural annotation of Beenome100 genome assemblies using [EGAPx](https://github.com/ncbi/egapx).
 
+# Contents
+- [EGAPx annotation protocol](#egapx-annotation-protocol)
+  * [Prerequisites](#prerequisites)
+  * [Input Evidence](#input-evidence)
+    + [RNAseq](#rnaseq)
+    + [Protein evidence](#protein-evidence)
+  * [Run EGAPx](#run-egapx)
+    + [Input files](#input-files)
+      - [YAML config file](#yaml-config-file)
+      - [RNAseq list file](#rnaseq-list-file)
+    + [EGAPx](#egapx)
+      - [QC scripts (optional)](#qc-scripts--optional-)
+  * [Processing EGAPx output](#processing-egapx-output)
+    + [GenBank/RefSeq assemblies](#genbank-refseq-assemblies)
+    + [Embargoed assemblies](#embargoed-assemblies)
+  * [Non-bee assemblies](#non-bee-assemblies)
+
 ## Prerequisites 
 EGAPx v0.4.0-alpha
 
@@ -222,5 +239,5 @@ Do not use the custom protein files and do not include the `proteins:` and `prot
 
 If the annotations will be submitted to NCBI, use the official locus tag prefix from NCBI. If the data will only be used internally, improvise a locus tag prefix using the first three names of the genus and species name, e.g., *Tribolium castaneum* would be TRICAS.
 
-Regarding the ToLiDs used in file naming, if the assembly does not have a unique ToLID or the ToLiD is unknown, use the ToLID species name and omit the sample number, e.g., icTriCast as opposed to icTriCast8.
+Regarding the ToLiDs used in file naming, if the assembly does not have a unique ToLID use the assembly name, e.g., Tcas5.2.
 
