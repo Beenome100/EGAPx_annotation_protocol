@@ -33,7 +33,7 @@ If conspecific RNAseq is not available for head, abdomen, or thorax, use congene
 When using congeneric or confamilial RNAseq, verify that at least 10 million reads map to the source species (the species the RNAseq library came from) but it is not necessary to check whether 10 million reads also map to the target species (the species being annotated). Non-conspecific reads use [modified EGAPx alignment parameters](https://github.com/ncbi/egapx?tab=readme-ov-file#modifying-default-parameters). 
 
 ### Protein evidence
-The protein evidence provided by NCBI is supplemented with manually curated protein sequences provided by the Beenome working groups. Add the custom files [7399_v0.4.0_with_manual_annotations.faa](custom_protein_evidence/7399_v0.4.0_with_manual_annotations.faa) and [7399_v0.4.0.trusted_proteins.gi](custom_protein_evidence/7399_v0.4.0.trusted_proteins.gi) to the EGAPx parameter file.
+The protein evidence provided by NCBI is supplemented with manually curated protein sequences provided by the Beenome working groups. Add the custom files [7399_v0.4.0_with_manual_annotations.faa](custom_protein_evidence/7399_v0.4.0_with_manual_annotations.faa.gz) and [7399_v0.4.0.trusted_proteins.gi](custom_protein_evidence/7399_v0.4.0.trusted_proteins.gi) to the EGAPx parameter file.
 
 If this [error](https://github.com/ncbi/egapx/issues/99) occurs (rare):
 ```
@@ -43,7 +43,7 @@ Caused by:
 ...
 [morecore] insufficient memory
 ```
-Use [7399_v0.4.0_with_manual_annotations_no_NP_001189070.1.faa](custom_protein_evidence/7399_v0.4.0_with_manual_annotations_no_NP_001189070.1.faa) instead of 7399_v0.4.0_with_manual_annotations.faa.
+Use [7399_v0.4.0_with_manual_annotations_no_NP_001189070.1.faa](custom_protein_evidence/7399_v0.4.0_with_manual_annotations_no_NP_001189070.1.faa.gz) instead of 7399_v0.4.0_with_manual_annotations.faa.
 
 ## Run EGAPx
 ### Input files
