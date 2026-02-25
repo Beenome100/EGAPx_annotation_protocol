@@ -11,11 +11,11 @@ Structural annotation of Beenome100 genome assemblies using [EGAPx](https://gith
     + [YAML config file](#yaml-config-file)
     + [RNAseq list file](#rnaseq-list-file)
   * [EGAPx](#egapx)
-    + [QC scripts (optional)](#qc-scripts--optional-)
+    + [QC scripts (optional)](#qc-scripts-optional)
 - [Processing EGAPx output](#processing-egapx-output)
-  * [GenBank/RefSeq assemblies](#genbank-refseq-assemblies)
+  * [NCBI assemblies](#ncbi-assemblies)
   * [Embargoed assemblies](#embargoed-assemblies)
-- [Non-bee assemblies](#non-bee-assemblies)
+- [Non-Beenome assemblies](#non-beenome-assemblies)
 
 ## Prerequisites 
 EGAPx v0.4.0-alpha
@@ -143,11 +143,12 @@ sbatch QC.sh
 ```
 </details>
 
-
 ## Processing EGAPx output
 Once EGAPx has successfully finished, delete the NextFlow "work" directory because it is typically over 100GB.
 
-### GenBank/RefSeq assemblies
+In addition to the annotation files mentioned below, it is worth keeping file `new.gnomon_quality_report.txt` (GNOMON/new.gnomon_quality_report.txt) because it summarizes the evidence supporting each RNA model. See [here](https://github.com/ncbi/egapx?tab=readme-ov-file#interpreting-output) for details and how to interpret this file.
+
+### NCBI assemblies
 1. Get the following annotation files from the EGAPx output directory:
 ```
 complete.cds.fna
@@ -233,8 +234,8 @@ The longest_isoform directory should have the permissions `drwxr-s---` (if chmod
 ### Embargoed assemblies
 [unfinished section] Will need to use annotation files extracted from the `prepare_submission` .sqn file ()
 
-## Non-bee assemblies
-Do not use the custom protein files and do not include the `proteins:` and `proteins_trusted:` lines in the EGAPx YAML file.
+## Non-Beenome assemblies
+If the species is not a bee, do not use the custom protein files and do not include the `proteins:` and `proteins_trusted:` lines in the EGAPx YAML file.
 
 If the annotations will be submitted to NCBI, use the official locus tag prefix from NCBI. If the data will only be used internally, improvise a locus tag prefix using the first three names of the genus and species name, e.g., *Tribolium castaneum* would be TRICAS.
 
