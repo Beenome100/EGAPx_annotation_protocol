@@ -1,0 +1,11 @@
+threads: 48
+species_name: empty
+genome_assembly:
+    class: File
+    path: /project/beenome100/kim.vertacnik/EGAPx/empty/empty_EGAPx/empty_complete.genomic.fna
+gff_file: 
+    class: File
+    path: /project/beenome100/kim.vertacnik/EGAPx/empty/empty_EGAPx/empty_complete.genomic.gff
+blast_database:
+    class: Directory
+    path: /project/beenome100/kim.vertacnik/programs/QC/tools/dmel_blastDB

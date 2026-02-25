@@ -1,0 +1,12 @@
+makeblastdb -in Dmel_refseq_release6_protein.faa -dbtype prot -parse_seqids -logfile db_log.out -title Dmel_refseq_release6 -out Dmel_refseq_release6
+
+Building a new DB, current time: 04/05/2025 13:35:00
+New DB name:   /Users/kim/Desktop/cwl/blastp_and_pident_steps_only/tools/untitled folder/Dmel_refseq_release6
+New DB title:  Dmel_refseq_release6
+Sequence type: Protein
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 30802 sequences in 0.966124 seconds.
+
+
+BLAST Database error: Database memory map file error
